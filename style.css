@@ -1,0 +1,43 @@
+html::before {
+  content: 'CodePen ♥ The Web';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  font-family: monospace;
+  opacity: 0.6;
+  background: rebeccapurple;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+/* จัดการแถบเลื่อนแบบ Custom ซ่อนให้คลีนตามรูปแบบ Mobile Web App */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* แอนิเมชันเปิดหน้าจอให้มีการ Fade และเลื่อนขึ้นสมูทๆ */
+.spa-screen {
+    animation: screenFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes screenFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.status-glow {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
